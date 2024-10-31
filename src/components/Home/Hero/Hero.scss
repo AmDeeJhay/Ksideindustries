@@ -1,0 +1,91 @@
+.hero {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: #fbf9f9;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #005bb5;
+    margin: 0 4rem;
+    margin-top: 5%;
+    line-height: 1.2; // Adjust line height for better spacing
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #000; // Slightly darker color for readability
+    margin: 0 4rem;
+    margin-top: 2%;
+    font-weight: 500;
+    line-height: 1.6; // Enhance readability
+  }
+
+  .hero-btn {
+    display: flex;
+    gap: 1rem;
+    margin: 2% 2% 0 4rem; // Adjust spacing
+
+    button {
+      width: 13%;
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      gap: 0.7rem;
+      padding: 1rem 1.5rem;
+      font-family: 'poppins';
+      font-weight: 500;
+      margin-top: 1%;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      .custom-arrow {
+        font-size: 13px;  // Adjusts the overall size
+        stroke-width: 13px;  // Reduces the arrow thickness
+        
+        path {
+          stroke: currentColor;  // Ensures it inherits the button color
+          stroke-width: 0;     // Make this thicker or thinner as needed
+        }
+      }
+      
+
+      &:first-of-type {
+        background-color: #005bb5;
+        color: white;
+
+        &:hover {
+          background-color: #333;
+        }
+      }
+
+      &:last-of-type {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+
+        &:hover {
+          background-color: #f1f9ff;
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; // Adds rounded corners
+    }
+  }
+
+}
