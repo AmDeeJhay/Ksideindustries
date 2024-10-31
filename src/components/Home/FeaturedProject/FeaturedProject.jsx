@@ -1,7 +1,7 @@
 import './FeaturedProject.scss';
-import project1Image from '../../../assets/images/1.png';
-import project2Image from '../../../assets/images/2.png';
-import project3Image from '../../../assets/images/3.png';
+import project1Image from '../../../assets/images/heroImg1.png';
+import project2Image from '../../../assets/images/heroImg1.png';
+import project3Image from '../../../assets/images/heroImg1.png';
 
 const FeaturedProject = () => {
   return (
