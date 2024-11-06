@@ -21,6 +21,10 @@ const FeaturedProject = () => {
           {/* <p className="project-description">B2B Platform</p> */}
         </div>
       </div>
+      <div className="project-info">
+        <p>See more projects from our happy clients all over the world</p>
+        <button className="see-more-btn">See More</button>
+      </div>
     </section>
   );
 };

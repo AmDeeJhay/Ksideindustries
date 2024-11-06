@@ -5,7 +5,7 @@ import KsideDriven from './components/Home/KsideDriven/KsideDriven'
 import FeaturedProject from './components/Home/FeaturedProject/FeaturedProject'
 import Form from './components/Home/Form/Form'
 import Map from './components/Home/Map/Map'
-
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <FeaturedProject />
       <Form />
       <Map />
-     
+      <Footer />
     </div>
   );
 }

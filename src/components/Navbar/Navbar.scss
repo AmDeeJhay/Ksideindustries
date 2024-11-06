@@ -25,7 +25,7 @@
     li {
       a {
         position: relative;
-        padding: 5px 0;
+        
         padding-bottom: 2px;
         transition: #fbf9f9 0.3s ease;
         text-decoration: none;
@@ -33,7 +33,7 @@
         font-weight: 500;
         font-size: 16px;
         transition: color 0.3s;
-        left: 10px;
+        left: -55%;
 
         &::after{
             content: "";
@@ -53,6 +53,55 @@
         &:hover::after {
             width: 100%;
         }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    margin-right: 1.5rem;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; // Hide navigation links on smaller screens
+  }
+
+  .hamburger {
+    display: flex; // Show hamburger menu on smaller screens
+  }
+}
+
+// Media query to display nav-links when the menu is open on smaller screens
+@media (max-width: 768px) {
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fbf9f9;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(185, 108, 108, 0.1);
+
+    li {
+      margin: 0.5rem 0;
+      text-align: center;
+
+      a {
+        font-size: 18px;
       }
     }
   }

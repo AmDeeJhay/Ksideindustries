@@ -1,75 +1,81 @@
 .hero {
   display: flex;
   height: 80vh;
-  flex-direction: column;
+  flex-direction: row;
   padding: 2.5rem;
   background-color: #fbf9f9;
+  gap: 1rem;
+  
+  .hero-text{
+    margin-top: 6%;
 
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: #005bb5;
-    margin: 0 4rem;
-    margin-top: 5%;
-    line-height: 1.2; // Adjust line height for better spacing
-  }
-
-  p {
-    font-size: 0.9rem;
-    color: #000; // Slightly darker color for readability
-    margin: 0 4rem;
-    margin-top: 2%;
-    font-weight: 500;
-    line-height: 1.6; // Enhance readability
-  }
-
-  .hero-btn {
-    display: flex;
-    gap: 1rem;
-    margin: 2% 2% 0 4rem; // Adjust spacing
-
-    button {
-      width: 13%;
-      display: flex;
-      align-items: center; 
-      justify-content: center;
-      gap: 0.7rem;
-      padding: 1rem 1.5rem;
-      font-family: 'poppins';
+    h2 {
+      font-size: 2.5rem;
       font-weight: 500;
-      margin-top: 1%;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      color: #000;
+      margin: 0 4rem;
+      margin-top: 5%;
+      line-height: 1.2; // Adjust line height for better spacing
+    }
 
-      .custom-arrow {
-        font-size: 13px;  // Adjusts the overall size
-        stroke-width: 13px;  // Reduces the arrow thickness
+    p {
+      font-size: 0.9rem;
+      color: #000; // Slightly darker color for readability
+      margin: 0 4rem;
+      margin-top: 2%;
+      font-weight: 500;
+      line-height: 1.6; // Enhance readability
+    }
+
+    .hero-btn {
+      display: flex;
+      gap: 1rem;
+      margin: 2% 2% 0 4rem; // Adjust spacing
+
+      button {
+        width: 35%;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        gap: 0.7rem;
+        padding: 1rem 1.5rem;
+        font-family: 'poppins';
+        font-weight: 500;
+        margin-top: 1%;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+        .custom-arrow {
+          font-size: 13px;  // Adjusts the overall size
+          stroke-width: 13px;  // Reduces the arrow thickness
+          
+          path {
+            stroke: currentColor;  // Ensures it inherits the button color
+            stroke-width: 0;     // Make this thicker or thinner as needed
+          }
+        }
         
-        path {
-          stroke: currentColor;  // Ensures it inherits the button color
-          stroke-width: 0;     // Make this thicker or thinner as needed
+
+        &:first-of-type {
+          background-color: #000;
+          color: white;
+
+          &:hover {
+            background-color: #333;
+          }
         }
-      }
-      
 
-      &:first-of-type {
-        background-color: #005bb5;
-        color: white;
+        &:last-of-type {
+          background-color: #fff;
+          color: #000;
+          border: 1px solid #000;
 
-        &:hover {
-          background-color: #333;
-        }
-      }
-
-      &:last-of-type {
-        background-color: #fff;
-        color: #000;
-        border: 1px solid #000;
-
-        &:hover {
-          background-color: #f1f9ff;
+          &:hover {
+            background-color: #f1f9ff;
+          }
         }
       }
     }
@@ -77,16 +83,40 @@
 
   .hero-image {
     flex: 1;
+    position: relative;
     display: flex;
     justify-content: center;
-    padding-right: 2rem;
-
+    align-items: center;
+    
+  
     img {
       max-width: 100%;
-      height: auto;
-      margin: 0;
-      border-radius: 10px; // Adds rounded corners
-    } 
-  }
+      height: 30vh;
+      border-radius: 10px;
 
+    }
+  
+    img:first-of-type {
+      position: absolute;
+      top: 11%; // Adjust to position it on top of the middle image
+      left: 34.6%; // Adjust as needed for horizontal alignment
+      z-index: 2; // Ensures it's layered above the middle image
+      height: 25vh;
+    }
+  
+    img:nth-of-type(2) {
+      z-index: 1; // Middle image stays at the base
+      height: 60vh;
+      margin-right: -28%;
+    }
+  
+    img:last-of-type {
+      position: absolute;
+      bottom: 11%; // Adjust to position it under the middle image
+      left: 67.8%; // Adjust as needed for horizontal alignment
+      z-index: 0; // Behind the first image but potentially below the middle
+      height: 25vh;
+    }
+  }
+  
 }
