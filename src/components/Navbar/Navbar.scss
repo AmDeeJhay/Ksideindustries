@@ -73,20 +73,13 @@
 
     .nav-links {
       flex-direction: column;
-      background-color: #000; // New background color for nav links in mobile
       position: absolute;
       top: 100%;
       right: 0;
       width: 100%;
       text-align: center;
 
-      li {
-        margin: 1rem 0;
-      }
-
-      li a {
-        color: #fff; // Change link color for better contrast on dark background
-      }
+      
     }
   }
 }
