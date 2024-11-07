@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-text">
         <h2>Building Reliable<br /> Software That Powers<br /> Engagement</h2>
-        <p>At Kside, we create Software solutions that enhance user<br /> interactions and foster lasting connections</p>
+        <p>At Kside, we create Software solutions that<br /> enhance user interactions and foster lasting connections</p>
         <div className="hero-btn">
           <button>Get Started <FaArrowRight className="custom-arrow" /></button>
           <button>Learn More</button>
