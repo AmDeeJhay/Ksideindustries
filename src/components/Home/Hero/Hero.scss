@@ -85,10 +85,12 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 2rem;
+      font-family: 'poppins';
+      font-weight: 500;
       background: none;
       border: none;
       cursor: pointer;
-      color: #333;
+      color: #fff;
       transition: color 0.3s;
 
       &.left-arrow {
@@ -114,13 +116,13 @@
         width: 10px;
         height: 10px;
         margin: 0 5px;
-        background-color: #c4c4c4;
+        background-color: #fdfdfd;
         border-radius: 50%;
         cursor: pointer;
         transition: background-color 0.3s;
 
         &.active {
-          background-color: #333;
+          background-color: #000;
         }
       }
     }
