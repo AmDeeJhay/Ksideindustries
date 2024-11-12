@@ -12,6 +12,8 @@ html{
 body {
   font-family: 'Poppins';
   color: $text-color;
+  overflow-x: hidden;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: $secondary-color;

@@ -98,7 +98,7 @@
     padding: 2rem;
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
 
     .project-small img {
@@ -107,7 +107,7 @@
 
     .project-info .see-more-btn {
       width: 70%;
-      font-size: 0.9rem;
+      font-size: 0.2rem;
       padding: 0.5rem;
     }
   }
@@ -115,9 +115,10 @@
   /* Small Mobile View */
   @media (max-width: 480px) {
     padding: 1rem;
-
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 2%;
+      margin-top: 5%;
     }
 
     .project-large img,
@@ -126,8 +127,8 @@
     }
 
     .project-info .see-more-btn {
-      width: 80%;
-      font-size: 0.8rem;
+      width: 52%;
+      font-size: 0.98rem;
       padding: 0.4rem;
     }
   }
