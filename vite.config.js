@@ -6,8 +6,3 @@ export default defineConfig({
   plugins: [react()],
 })
 
-export default {
-  optimizeDeps: {
-    include: ['swiper'],
-  },
-};
