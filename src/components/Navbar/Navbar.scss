@@ -37,12 +37,12 @@
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: #005bb5;
+          background-color: #000;
           transition: width 0.8s ease-in-out;
         }
 
         &:hover {
-          color: #005bb5;
+          color: #333;
         }
 
         &:hover::after {
@@ -62,30 +62,66 @@
       width: 25px;
       background: #000;
       margin: 4px 0;
-      transition: 0.4s;
+      transition: 0.4s; 
+    }
+    
+    .close-icon {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 600;
+      position: fixed;
+      margin: 0.5rem -1.2rem;
     }
   }
 
   // Mobile view
   @media (max-width: 768px) {
     .nav-links {
-      position: absolute;
-      top: 40px;
-      right: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
       background-color: #000;
       color: #fff;
-      width: 45%;
-      height: calc(57vh - 60px);
+      display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
       justify-content: center;
       gap: 2rem;
+      align-items: flex-start;
+      padding-left: 2rem;
       transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 10;
       opacity: 0;
       visibility: hidden;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      z-index: 10;
+      text-align: justify;
+      
+      li {
+        a {
+          color: #fff;
+          top: -5rem;
+          font-size: 1.2rem;
+          left: 1rem;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.8s ease-in-out;
+          }
+  
+          &:hover {
+            color: #333;
+          }
+  
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
 
       &.open {
         transform: translateX(0);
@@ -96,7 +132,9 @@
     }
 
     .logo{
-      
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 700;
       margin: 0 -1rem;
       margin-top: 1rem;
       text-align: center;
@@ -106,6 +144,7 @@
       display: flex;
       margin-top: 1rem;
       margin: 0 -1rem;
+      z-index: 11;
     }
   }
 }

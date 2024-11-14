@@ -19,9 +19,15 @@ const Navbar = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+        {isOpen ? (
+          <span className=" close-icon">X</span>
+        ) : (
+          <>
+            <span></span>
+            <span></span>
+            <span></span>
+          </>
+        )} 
       </div>
     </nav>
   );

@@ -11,4 +11,29 @@
       border: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
     }
+
+    @media (max-width: 1024px) {
+      padding: 2rem;
+  
+      iframe {
+        height: 350px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+  
+      iframe {
+        height: 300px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 1rem;
+  
+      iframe {
+        height: 250px;
+        border-radius: 6px;
+      }
+    }
   }
