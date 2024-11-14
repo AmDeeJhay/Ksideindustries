@@ -12,12 +12,22 @@ const Hero = () => {
   const images = [analysis, Mask, charts];
 
   useEffect(() => {
+    // Auto-slide every 2 seconds in mobile view
+    if (isMobile) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 5000); // 2 seconds
+      return () => clearInterval(timer);
+    }
+  }, [isMobile]);
+
+  useEffect(() => {
+    // Update isMobile state on resize
     const handleResize = () => setIsMobile(window.innerWidth <= 1024);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Function to handle next and previous arrows
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -30,23 +40,19 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-text">
         <h2>Building Reliable<br /> Software That Powers<br /> Engagement</h2>
-        <p>At Kside, we create Software solutions that<br /> enhance user interactions and foster lasting connections</p>
+        <p>At Kside, we create software solutions that<br /> enhance user interactions and foster lasting connections</p>
         <div className="hero-btn">
           <button>Get Started <FaArrowRight className="custom-arrow" /></button>
           <button>Learn More</button>
         </div>
       </div>
 
-      <div className="hero-image">
+      <div className={`hero-image ${isMobile ? 'mobile-carousel' : 'desktop-layout'}`}>
         {isMobile ? (
           <>
-            <img src={images[currentIndex]} alt="carousel image" className="carousel-image" />
-
-            {/* Navigation arrows */}
+            <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
             <button className="arrow left-arrow" onClick={prevImage}>&lt;</button>
             <button className="arrow right-arrow" onClick={nextImage}>&gt;</button>
-
-            {/* Dots for manual selection */}
             <div className="carousel-dots">
               {images.map((_, index) => (
                 <span
@@ -58,7 +64,11 @@ const Hero = () => {
             </div>
           </>
         ) : (
-          <img src={analysis} alt="static hero" />
+          <>
+            <img src={analysis} alt="hero" className="hero-img" />
+            <img src={Mask} alt="Mask" className="hero-img" />
+            <img src={charts} alt="charts" className="hero-img" />
+          </>
         )}
       </div>
     </section>

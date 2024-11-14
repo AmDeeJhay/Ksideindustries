@@ -41,7 +41,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="social-icon" />
               </a>
             </li>
