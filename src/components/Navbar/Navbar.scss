@@ -56,6 +56,7 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
+    
 
     span {
       height: 2px;
@@ -143,8 +144,9 @@
     .hamburger {
       display: flex;
       margin-top: 1rem;
-      margin: 0 -1rem;
+      margin: 0 18.5rem;
       z-index: 11;
+      position: fixed;
     }
   }
 }
